@@ -1,7 +1,8 @@
 "use client";
-import { BarChart3, ChevronDown, LayoutDashboard } from "lucide-react";
+import { ChevronDown, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { items } from "./app-sidebar-config";
 import {
   Collapsible,
   CollapsibleContent,
@@ -18,24 +19,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "./ui/sidebar";
-
-const items = {
-  book1: [
-    {
-      title: "Pronombres Complemento",
-      url: "/dashboard/direct-components",
-      icon: BarChart3,
-    },
-    {
-      title: "El Modo Imperativo",
-      url: "/dashboard/imperative-mood",
-      icon: BarChart3,
-    },
-  ],
-  book2: [
-    // { title: "Home", url: "/dashboard", icon: BarChart3 }
-  ],
-};
 
 export function AppSidebar() {
   const pathname = usePathname();

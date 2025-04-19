@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { Footer } from "@/components/footer";
 import Header from "@/components/header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
@@ -15,6 +16,7 @@ export default function DashboardLayout({
         <main className="flex flex-col gap-2 m-4 lg:gap-4 lg:m-8">
           {children}
         </main>
+        <Footer />
       </SidebarInset>
     </SidebarProvider>
   );
