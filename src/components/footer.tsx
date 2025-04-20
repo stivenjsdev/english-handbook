@@ -18,7 +18,7 @@ export function Footer() {
     currentIndex < allLinks.length - 1 ? allLinks[currentIndex + 1] : null;
 
   return (
-    <footer className="h-16 mt-8 flex items-center justify-between px-4 lg:px-8 border-t bg-background">
+    <footer className="h-16 flex items-center justify-between px-4 lg:px-8 border-t bg-background fixed bottom-0 left-0 w-full z-50">
       {previous ? (
         <Link href={previous.url} className="text-gray-700 hover:underline">
           <span className="flex items-center gap-1">

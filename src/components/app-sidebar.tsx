@@ -23,7 +23,7 @@ import {
 export function AppSidebar() {
   const pathname = usePathname();
   return (
-    <Sidebar>
+    <Sidebar className="pt-16 pb-16">
       <SidebarHeader className="h-16 border-b border-sidebar-border">
         <SidebarMenu>
           <SidebarMenuItem>
