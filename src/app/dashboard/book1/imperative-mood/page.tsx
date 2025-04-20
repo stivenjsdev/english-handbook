@@ -37,14 +37,14 @@ export default function ImperativeMoodPage() {
     },
     {
       column1: (
-        <>
+        <div>
           Leave <Bold>them!</Bold>
-        </>
+        </div>
       ),
       column2: (
-        <>
+        <div>
           Don't leave (<Bold>them</Bold>)!
-        </>
+        </div>
       ),
     },
   ];
