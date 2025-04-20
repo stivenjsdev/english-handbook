@@ -1,4 +1,4 @@
-import { MessageCircleWarning, Users } from "lucide-react";
+import { MessageCircleWarning, NotebookText, Users } from "lucide-react";
 
 export const items = {
   book1: [
@@ -11,6 +11,11 @@ export const items = {
       title: "El Modo Imperativo",
       url: "/dashboard/book1/imperative-mood",
       icon: MessageCircleWarning,
+    },
+    {
+      title: "Verbs, Group One (1)",
+      url: "/dashboard/book1/verbs-group-one",
+      icon: NotebookText,
     },
   ],
   book2: [

@@ -23,7 +23,7 @@ export function Footer() {
         <Link href={previous.url} className="text-gray-700 hover:underline">
           <span className="flex items-center gap-1">
             <ChevronLeft />
-            <span>{previous.title}</span>
+            <span className="text-sm lg:text-base">{previous.title}</span>
           </span>
         </Link>
       ) : (
@@ -32,7 +32,7 @@ export function Footer() {
       {next ? (
         <Link href={next.url} className="text-gray-700 hover:underline">
           <span className="flex items-center gap-1">
-            <span>{next.title}</span>
+            <span className="text-sm lg:text-base">{next.title}</span>
             <ChevronRight />
           </span>
         </Link>

@@ -8,43 +8,27 @@ import imperativeMoodCase1 from "./imperativeMoodCase1.png";
 export default function ImperativeMoodPage() {
   const firstCaseTable = [
     {
-      column1: (
-        <div className="text-center">
-          <Bold>Ordenatario (yo)</Bold>
-        </div>
-      ),
-      column2: (
-        <div className="text-center">
-          <Bold>Ejecutante (Ustedes)</Bold>
-        </div>
-      ),
+      column1: <Bold className="mx-auto">Ordenatario (yo)</Bold>,
+      column2: <Bold className="mx-auto">Ejecutante (Ustedes)</Bold>,
+    },
+    {
+      column1: <Bold className="mx-auto">Afirmativo (affirmative)</Bold>,
+      column2: <Bold className="mx-auto">Negativo (negative)</Bold>,
+    },
+    {
+      column1: <span className="mx-auto">verbo + PC!</span>,
+      column2: <span className="mx-auto">Don't + verbo + PC!</span>,
     },
     {
       column1: (
-        <div className="text-center">
-          <Bold>Afirmativo (affirmative)</Bold>
-        </div>
-      ),
-      column2: (
-        <div className="text-center">
-          <Bold>Negativo (negative)</Bold>
-        </div>
-      ),
-    },
-    {
-      column1: <div className="text-center">verb + PC!</div>,
-      column2: <div className="text-center">Don't + verb + PC!</div>,
-    },
-    {
-      column1: (
-        <div>
+        <span>
           Leave <Bold>them!</Bold>
-        </div>
+        </span>
       ),
       column2: (
-        <div>
+        <span>
           Don't leave (<Bold>them</Bold>)!
-        </div>
+        </span>
       ),
     },
   ];
@@ -89,8 +73,11 @@ export default function ImperativeMoodPage() {
           alt="imperativeMoodCase1"
           className="rounded-sm"
         />
-        <p className="text-center text-sm font-semibold mt-4">
+        {/* <p className="text-center text-sm font-semibold mt-4">
           Imperative Mood Example
+        </p> */}
+        <p className="text-center text-sm font-semibold mt-4">
+          Open it!
         </p>
       </div>
     </section>
