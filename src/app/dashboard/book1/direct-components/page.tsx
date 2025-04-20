@@ -1,3 +1,7 @@
+import { Bold } from "@/components/bold";
+import { DynamicTable } from "@/components/dinamic-table";
+import { Title1 } from "@/components/title1";
+
 export default function DirectComponentsPage() {
   const directComponentsTable = [
     { column1: "Me", column2: "A mí" },
@@ -12,96 +16,69 @@ export default function DirectComponentsPage() {
     {
       column1: (
         <>
-          Bite <span className="font-bold">him</span>!
+          Bite <Bold>him</Bold>!
         </>
       ),
       column2: (
         <>
-          ¡Muérdalo (<span className="font-bold">a él</span>)!
+          ¡Muérdalo (<Bold>a él</Bold>)!
         </>
       ),
     },
     {
       column1: (
         <>
-          Kiss <span className="font-bold">me</span>!
+          Kiss <Bold>me</Bold>!
         </>
       ),
       column2: (
         <>
-          ¡Bésame (<span className="font-bold">a mí</span>)!
+          ¡Bésame (<Bold>a mí</Bold>)!
         </>
       ),
     },
     {
       column1: (
         <>
-          Leave <span className="font-bold">them</span>!
+          Leave <Bold>them</Bold>!
         </>
       ),
       column2: (
         <>
-          ¡Abandónelos (<span className="font-bold">a ellos</span>)!
+          ¡Abandónelos (<Bold>a ellos</Bold>)!
         </>
       ),
     },
     {
       column1: (
         <>
-          Help <span className="font-bold">them</span>!
+          Help <Bold>them</Bold>!
         </>
       ),
       column2: (
         <>
-          ¡Ayúdalos (<span className="font-bold">a ellos</span>)!
+          ¡Ayúdalos (<Bold>a ellos</Bold>)!
         </>
       ),
     },
   ];
   return (
     <section className="flex flex-col gap-4">
-      <h1 className="text-xl lg:text-3xl  font-bold text-center text-gray-800">
-        Direct Components - Pronombres Complemento
-      </h1>
+      <Title1>Direct Components - Pronombres Complemento</Title1>
       <p>
         Un direct complement (Pronombre Complemento) es la persona, animal o
         cosa que recibe directamente la acción del verbo en una oración. En
         otras palabras, es lo que el verbo afecta directamente.
       </p>
-      <div className="border border-gray-300 rounded-md overflow-hidden w-full lg:w-xl mx-auto">
-        {directComponentsTable.map((row, index) => (
-          <div
-            key={index}
-            className="flex justify-between border-b border-gray-300 last:border-b-0"
-          >
-            <div className="p-2 w-1/2 border-r border-gray-300">
-              {row.column1}
-            </div>
-            <div className="p-2 w-1/2">{row.column2}</div>
-          </div>
-        ))}
-      </div>
+      <DynamicTable rows={directComponentsTable} />
       {/* <p>📌 Estructura típica:</p>
       <p className="font-semibold">Sujeto + Verbo + Pronombre Complemento</p> */}
       <p>
-        <span className="font-bold">Nota: </span>Los anteriores nombres no
-        llevan la preposición <span className="font-bold">a (to)</span> cuando
-        funcionan como acusativo (paciente), es decir, cuando reciben
-        directamente la significación del verbo, asi:
+        <Bold>Nota: </Bold>Los anteriores nombres no llevan la preposición{" "}
+        <Bold>a (to)</Bold> cuando funcionan como acusativo (paciente), es
+        decir, cuando reciben directamente la significación del verbo, asi:
       </p>
-      <div className="border border-gray-300 rounded-md overflow-hidden w-full lg:w-xl mx-auto">
-        {examplesTable.map((row, index) => (
-          <div
-            key={index}
-            className="flex justify-between border-b border-gray-300 last:border-b-0"
-          >
-            <div className="p-2 w-1/2 border-r border-gray-300">
-              {row.column1}
-            </div>
-            <div className="p-2 w-1/2">{row.column2}</div>
-          </div>
-        ))}
-      </div>
+      <DynamicTable rows={examplesTable} />
     </section>
   );
 }
