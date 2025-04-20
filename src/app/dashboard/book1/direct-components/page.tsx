@@ -1,5 +1,5 @@
 import { Bold } from "@/components/bold";
-import { DynamicTable } from "@/components/dinamic-table";
+import { DynamicTable } from "@/components/dynamic-table";
 import { Title1 } from "@/components/title1";
 
 export default function DirectComponentsPage() {

@@ -1,7 +1,9 @@
 import { Bold } from "@/components/bold";
-import { DynamicTable } from "@/components/dinamic-table";
+import { DynamicTable } from "@/components/dynamic-table";
 import { Title1 } from "@/components/title1";
 import { Title2 } from "@/components/title2";
+import Image from "next/image";
+import imperativeMoodCase1 from "./imperativeMoodCase1.png";
 
 export default function ImperativeMoodPage() {
   const firstCaseTable = [
@@ -81,6 +83,16 @@ export default function ImperativeMoodPage() {
       </p>
       <DynamicTable rows={firstCaseTable} />
       <DynamicTable rows={examplesTable} size="3xl" />
+      <div className="bg-white border border-gray-300 shadow-lg rounded-sm p-4 pb-8 w-full lg:w-xl lg:mx-auto">
+        <Image
+          src={imperativeMoodCase1}
+          alt="imperativeMoodCase1"
+          className="rounded-sm"
+        />
+        <p className="text-center text-sm font-semibold mt-4">
+          Imperative Mood Example
+        </p>
+      </div>
     </section>
   );
 }
