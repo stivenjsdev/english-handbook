@@ -1,5 +1,7 @@
 import { DynamicTableWithLinks } from "@/components/dynamic-table-with-links";
 import { Title1 } from "@/components/title1";
+import Image from "next/image";
+import verbsGroupOne from "./verbsGroupOne.png";
 
 export default function VerbsGroupOnePage() {
   const verbsGroupOneTable = [
@@ -116,6 +118,31 @@ export default function VerbsGroupOnePage() {
       <p className="text-xs text-gray-600 text-right w-full lg:w-xl lg:mx-auto pr-1">
         Total: {verbsGroupOneTable.length}
       </p>
+      <div className="bg-white border border-gray-300 shadow-lg rounded-sm p-4 pb-8 w-full lg:w-xl lg:mx-auto">
+        <Image src={verbsGroupOne} alt="verbsGroupOne" className="rounded-sm" />
+        <p className="text-center text-sm font-semibold mt-4">
+          Verbs Group One Example
+        </p>
+      </div>
+      <h2 className="text-lg lg:text-xl font-semibold text-gray-700">
+        Exercise:
+      </h2>
+      <ol className="list-decimal list-inside space-y-4">
+        <li className="[&::marker]:font-bold">
+          Take a sheet of paper and a pen. Handwrite the table from the previous
+          section, including each word, its translation, and its pronunciation.
+        </li>
+        <li className="[&::marker]:font-bold">
+          Once your table is complete, practice each word by repeating its
+          pronunciation several times. If you forget how to pronounce a word,
+          listen to it again and restart the practice.
+        </li>
+        <li className="[&::marker]:font-bold">
+          Ask someone to help you by testing your vocabulary. They should ask
+          you to translate words from English to Spanish and from Spanish to
+          English, and correct you if you make any mistakes.
+        </li>
+      </ol>
     </section>
   );
 }
