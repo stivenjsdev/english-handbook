@@ -15,50 +15,50 @@ export default function DirectComponentsPage() {
   const examplesTable = [
     {
       column1: (
-        <>
-          Bite <Bold>him</Bold>!
-        </>
+        <div>
+          Bite <Bold> him</Bold>!
+        </div>
       ),
       column2: (
-        <>
+        <div>
           ¡Muérdalo (<Bold>a él</Bold>)!
-        </>
+        </div>
       ),
     },
     {
       column1: (
-        <>
+        <div>
           Kiss <Bold>me</Bold>!
-        </>
+        </div>
       ),
       column2: (
-        <>
+        <div>
           ¡Bésame (<Bold>a mí</Bold>)!
-        </>
+        </div>
       ),
     },
     {
       column1: (
-        <>
+        <div>
           Leave <Bold>them</Bold>!
-        </>
+        </div>
       ),
       column2: (
-        <>
+        <div>
           ¡Abandónelos (<Bold>a ellos</Bold>)!
-        </>
+        </div>
       ),
     },
     {
       column1: (
-        <>
+        <div>
           Help <Bold>them</Bold>!
-        </>
+        </div>
       ),
       column2: (
-        <>
+        <div>
           ¡Ayúdalos (<Bold>a ellos</Bold>)!
-        </>
+        </div>
       ),
     },
   ];
