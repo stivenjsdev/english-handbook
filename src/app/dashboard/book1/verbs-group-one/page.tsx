@@ -1,5 +1,8 @@
 import { DynamicTableWithLinks } from "@/components/dynamic-table-with-links";
 import { Title1 } from "@/components/title1";
+import { Title2 } from "@/components/title2";
+import { Separator } from "@/components/ui/separator";
+import { SquareChevronRight } from "lucide-react";
 import Image from "next/image";
 import verbsGroupOne from "./verbsGroupOne.png";
 
@@ -143,6 +146,76 @@ export default function VerbsGroupOnePage() {
           English, and correct you if you make any mistakes.
         </li>
       </ol>
+
+      <Separator />
+
+      <div className="grid grid-cols-4 border border-gray-300 w-full lg:w-3xl mx-auto rounded-md overflow-hidden">
+        {/* Header */}
+        <div className="col-span-2 border-r border-gray-300">
+          <div className="text-center font-semibold p-2 border-b border-gray-300">
+            Afirmativo
+          </div>
+        </div>
+        <div className="col-span-2">
+          <div className="text-center font-semibold p-2 border-b border-gray-300">
+            Negativo
+          </div>
+        </div>
+
+        {/* Afirmativo side */}
+        <div className="row-span-6 flex items-center justify-center font-bold border-r border-gray-300 p-2">
+          KISS
+        </div>
+        <div className="flex flex-col col-span-1">
+          {["ME", "US", "THEM", "HIM", "HER", "IT"].map((pronoun, i) => (
+            <div
+              key={i}
+              className="border-b last:border-b-0 border-r border-gray-300 p-2 text-center"
+            >
+              {pronoun}
+            </div>
+          ))}
+        </div>
+
+        {/* Negativo side */}
+        <div className="row-span-6 flex items-center justify-center font-bold border-r border-gray-300 p-2">
+          DON'T KISS
+        </div>
+        <div className="flex flex-col col-span-1">
+          {["ME", "US", "THEM", "HIM", "HER", "IT"].map((pronoun, i) => (
+            <div
+              key={i}
+              className="border-b last:border-b-0 border-gray-300 p-2 text-center"
+            >
+              {pronoun}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <Title2 className="flex items-center gap-1">
+        <SquareChevronRight />
+        Ejemplos del cuadro anterior:
+      </Title2>
+
+      <div className="grid grid-cols-2 gap-2 lg:gap-4 lg:grid-cols-4">
+        <p>Kiss me!</p>
+        <p>¡Bésame!</p>
+        <p>Don't kiss me!</p>
+        <p>¡No me beses!</p>
+        <p>Kiss us!</p>
+        <p>¡Bésanos! (a nosotros)</p>
+        <p>Don't kiss us!</p>
+        <p>¡No nos bese!</p>
+        <p>Kiss them!</p>
+        <p>¡Bésalos! (a ellos)</p>
+        <p>Don't kiss them!</p>
+        <p>¡No los bese!</p>
+        <p>Kiss him!</p>
+        <p>¡Béselo! (a él)</p>
+        <p>Don't kiss him!</p>
+        <p>¡No lo bese!</p>
+      </div>
     </section>
   );
 }
