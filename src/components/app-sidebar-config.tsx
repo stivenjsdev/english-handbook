@@ -17,6 +17,11 @@ export const items = {
       url: "/dashboard/book1/verbs-group-one",
       icon: NotebookText,
     },
+    {
+      title: "Quiz Verbs, Group One (1)",
+      url: "/dashboard/book1/test-verbs-one",
+      icon: NotebookText,
+    },
   ],
   book2: [
     // { title: "Home", url: "/dashboard", icon: BarChart3 }
