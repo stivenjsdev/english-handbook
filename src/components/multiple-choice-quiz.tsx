@@ -1,5 +1,5 @@
 "use client"; // Indica que este componente se ejecuta del lado del cliente en Next.js
-import { PopcornIcon } from "lucide-react";
+import { FileQuestionIcon, PopcornIcon } from "lucide-react";
 import React, { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "../components/ui/alert";
 import { Button } from "../components/ui/button";
@@ -130,18 +130,23 @@ export const MultipleChoiceQuiz: React.FC<MultipleChoiceQuizProps> = ({
   return (
     <Card className="max-w-xl mx-auto p-6 flex flex-col gap-4">
       {/* Tarjeta principal del quiz */}
-      <h2 className="text-sm font-bold">
-        Pregunta {current + 1} de {shuffledQuestions.length}{" "}
-        {/* Número de pregunta */}
-      </h2>
-      <h3 className="text-sm">{q.question}</h3> {/* Texto de la pregunta */}
+      {/* Ícono decorativo */}
+      <header className="flex items-center gap-1">
+        <FileQuestionIcon className="w-4 h-4 text-gray-600" />
+        <h2 className="text-sm font-bold">
+          Pregunta {current + 1} de {shuffledQuestions.length}
+          {/* Número de pregunta */}
+        </h2>
+      </header>
+      {/* Texto de la pregunta */}
+      <h3 className="text-sm">{q.question}</h3>
+      {/* Opciones de respuesta */}
       <RadioGroup
         value={answers[current] ?? undefined}
         onValueChange={handleSelect}
       >
         {q.options.map((opt, idx) => (
           <div key={idx} className="flex items-center gap-3">
-            {" "}
             {/* Opción de respuesta */}
             <RadioGroupItem value={opt} id={`r${idx}`} /> {/* Botón de radio */}
             <Label htmlFor={`r${idx}`}>{opt}</Label>

@@ -1,4 +1,9 @@
-import { MessageCircleWarning, NotebookText, Users } from "lucide-react";
+import {
+  MessageCircleWarning,
+  NotebookText,
+  SquareMousePointerIcon,
+  Users
+} from "lucide-react";
 
 export const items = {
   book1: [
@@ -18,9 +23,9 @@ export const items = {
       icon: NotebookText,
     },
     {
-      title: "Quiz Verbs, Group One (1)",
+      title: "Quiz Verbs Group One (1)",
       url: "/dashboard/book1/test-verbs-one",
-      icon: NotebookText,
+      icon: SquareMousePointerIcon,
     },
   ],
   book2: [
