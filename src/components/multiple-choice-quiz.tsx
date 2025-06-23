@@ -18,14 +18,41 @@ interface MultipleChoiceQuizProps {
   questions: Question[]; // Arreglo de preguntas que recibe el componente
 }
 
+// Función para barajar un array (Fisher-Yates)
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 export const MultipleChoiceQuiz: React.FC<MultipleChoiceQuizProps> = ({
   questions,
 }) => {
+  // Estado para preguntas y opciones barajadas
+  const [shuffledQuestions, setShuffledQuestions] = useState<Question[] | null>(
+    null
+  );
+
+  // Barajar solo en el cliente después de montar
+  React.useEffect(() => {
+    const shuffled = shuffleArray(questions).map((q) => ({
+      ...q,
+      options: shuffleArray(q.options),
+    }));
+    setShuffledQuestions(shuffled);
+  }, [questions]);
+
   const [current, setCurrent] = useState(0); // Estado para la pregunta actual
   const [answers, setAnswers] = useState<(string | null)[]>(
     Array(questions.length).fill(null) // Estado para las respuestas del usuario, inicializadas en null
   );
   const [showResult, setShowResult] = useState(false); // Estado para mostrar los resultados
+
+  // Mientras no se haya barajado, no renderizar nada (o puedes poner un loader)
+  if (!shuffledQuestions) return null;
 
   const handleSelect = (value: string) => {
     const updated = [...answers]; // Copia el arreglo de respuestas
@@ -34,27 +61,26 @@ export const MultipleChoiceQuiz: React.FC<MultipleChoiceQuizProps> = ({
   };
 
   const handleNext = () => {
-    if (current < questions.length - 1) {
-      // Si no es la última pregunta
-      setCurrent(current + 1); // Avanza a la siguiente pregunta
+    if (current < shuffledQuestions.length - 1) {
+      setCurrent(current + 1);
     } else {
-      setShowResult(true); // Si es la última, muestra los resultados
+      setShowResult(true);
     }
   };
 
   const handleRestart = () => {
-    setAnswers(Array(questions.length).fill(null)); // Reinicia las respuestas
-    setCurrent(0); // Vuelve a la primera pregunta
-    setShowResult(false); // Oculta los resultados
+    setAnswers(Array(shuffledQuestions.length).fill(null));
+    setCurrent(0);
+    setShowResult(false);
   };
 
   // Calcular resultados
   const correctCount = answers.filter(
-    (a, i) => a === questions[i].answer // Cuenta las respuestas correctas
+    (a, i) => a === shuffledQuestions[i].answer
   ).length;
-  const wrongAnswers = questions
-    .map((q, i) => ({ ...q, userAnswer: answers[i] })) // Agrega la respuesta del usuario a cada pregunta
-    .filter((q) => q.userAnswer !== q.answer); // Filtra las preguntas incorrectas
+  const wrongAnswers = shuffledQuestions
+    .map((q, i) => ({ ...q, userAnswer: answers[i] }))
+    .filter((q) => q.userAnswer !== q.answer);
 
   if (showResult) {
     // Si se deben mostrar los resultados
@@ -65,7 +91,7 @@ export const MultipleChoiceQuiz: React.FC<MultipleChoiceQuizProps> = ({
           <PopcornIcon /> {/* Ícono decorativo */}
           <AlertTitle>Resultado</AlertTitle> {/* Título de la alerta */}
           <AlertDescription>
-            Puntaje: {correctCount} / {questions.length}
+            Puntaje: {correctCount} / {shuffledQuestions.length}
             {/* Muestra el puntaje */}
           </AlertDescription>
         </Alert>
@@ -97,19 +123,21 @@ export const MultipleChoiceQuiz: React.FC<MultipleChoiceQuizProps> = ({
     );
   }
 
-  const q = questions[current]; // Pregunta actual
-  console.log({ current, q, answers }); // Log para depuración
+  const q = shuffledQuestions[current]; // Pregunta actual
+  // console.log({ current, q, answers }); // Log para depuración
+  // console.log('answer[current]', answers[current]); // Log para depuración
 
   return (
     <Card className="max-w-xl mx-auto p-6 flex flex-col gap-4">
       {/* Tarjeta principal del quiz */}
       <h2 className="text-sm font-bold">
-        Pregunta {current + 1} de {questions.length} {/* Número de pregunta */}
+        Pregunta {current + 1} de {shuffledQuestions.length}{" "}
+        {/* Número de pregunta */}
       </h2>
       <h3 className="text-sm">{q.question}</h3> {/* Texto de la pregunta */}
       <RadioGroup
-        defaultValue={answers[current] ?? undefined} // Valor seleccionado por defecto
-        onValueChange={handleSelect} // Maneja el cambio de opción
+        value={answers[current] ?? undefined}
+        onValueChange={handleSelect}
       >
         {q.options.map((opt, idx) => (
           <div key={idx} className="flex items-center gap-3">
@@ -122,11 +150,11 @@ export const MultipleChoiceQuiz: React.FC<MultipleChoiceQuizProps> = ({
         ))}
       </RadioGroup>
       <Button
-        onClick={handleNext} // Maneja el avance a la siguiente pregunta
-        disabled={answers[current] == null} // Deshabilita si no hay respuesta
+        onClick={handleNext}
+        disabled={answers[current] == null}
         className="w-full"
       >
-        {current === questions.length - 1 ? "Finalizar" : "Siguiente"}
+        {current === shuffledQuestions.length - 1 ? "Finalizar" : "Siguiente"}
         {/* Texto del botón */}
       </Button>
     </Card>
