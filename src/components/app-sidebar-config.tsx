@@ -1,8 +1,9 @@
 import {
   MessageCircleWarning,
+  NotebookPenIcon,
   NotebookText,
   SquareMousePointerIcon,
-  Users
+  Users,
 } from "lucide-react";
 
 export const items = {
@@ -26,6 +27,11 @@ export const items = {
       title: "Quiz Verbs Group One (1)",
       url: "/dashboard/book1/test-verbs-one",
       icon: SquareMousePointerIcon,
+    },
+    {
+      title: "Exercise One (1) and Two (2)",
+      url: "/dashboard/book1/exercise-one-two",
+      icon: NotebookPenIcon,
     },
   ],
   book2: [

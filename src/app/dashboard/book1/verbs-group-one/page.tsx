@@ -24,7 +24,7 @@ export default function VerbsGroupOnePage() {
       link: "https://www.wordreference.com/es/translation.asp?tranword=benefit",
     },
     {
-      column1: "Borrow",
+      column1: "Borrow (from)",
       column2: "Pedir prestado (a)",
       link: "https://www.wordreference.com/es/translation.asp?tranword=borrow",
     },
