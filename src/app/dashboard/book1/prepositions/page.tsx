@@ -35,7 +35,7 @@ export default function PrepositionsPage() {
       link: "https://www.wordreference.com/es/translation.asp?tranword=instead",
     },
     {
-      column1: "BECAUSE OF: A cause de, por culpa de, gracias a",
+      column1: "BECAUSE OF: A causa de, por culpa de, gracias a",
       column2:
         "I benefit you because of them! (!Yo te beneficio gracias a ellas!). Beat him because of her! (!Golpéelo por culpa de ella!)",
       link: "https://www.wordreference.com/es/translation.asp?tranword=because",
@@ -57,7 +57,7 @@ export default function PrepositionsPage() {
     },
     {
       column1:
-        "BY: Por. Indica quien 'hace' la algo, cerca, el medio usado para 'hacer' algo",
+        "BY: Por. Indica quien 'hace' algo, cerca, el medio usado para 'hacer' algo",
       column2:
         "The lesson was explained by the teacher (La lección fue explicada por el profesor). He lives by my house (Él vive cerca de mi casa). By studying I passed Juan Jose's subject (Estudiando pasé la materia de Juan José).",
       link: "https://www.wordreference.com/es/translation.asp?tranword=by",
