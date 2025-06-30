@@ -33,6 +33,11 @@ export const items = {
       url: "/dashboard/book1/exercise-one-two",
       icon: NotebookPenIcon,
     },
+    {
+      title: "Preposiciones (Prepositions)",
+      url: "/dashboard/book1/prepositions",
+      icon: NotebookText,
+    },
   ],
   book2: [
     // { title: "Home", url: "/dashboard", icon: BarChart3 }
