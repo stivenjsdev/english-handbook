@@ -3,6 +3,7 @@ import {
   NotebookPenIcon,
   NotebookText,
   SquareMousePointerIcon,
+  Type,
   Users,
 } from "lucide-react";
 
@@ -36,6 +37,11 @@ export const items = {
     {
       title: "Preposiciones (Prepositions)",
       url: "/dashboard/book1/prepositions",
+      icon: Type,
+    },
+    {
+      title: "Verbs, Group Two (2)",
+      url: "/dashboard/book1/verbs-group-two",
       icon: NotebookText,
     },
   ],
