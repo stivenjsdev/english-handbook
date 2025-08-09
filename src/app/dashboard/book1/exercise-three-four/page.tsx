@@ -18,8 +18,8 @@ export default function ExerciseThreeAndFour() {
       <ol className="list-decimal list-outside ml-6 space-y-1">
         {exerciseItems1.map((text, idx) => (
           <li key={idx} className="[&::marker]:font-bold">
-            <div className="flex items-center gap-2">
-              <p className="whitespace-nowrap">{text}</p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+              <p className="truncate sm:whitespace-nowrap whitespace-normal sm:mb-0 mb-1 max-w-full">{text}</p>
               <Input type="text" className="flex-1 min-w-0" />
             </div>
           </li>
@@ -33,8 +33,8 @@ export default function ExerciseThreeAndFour() {
       <ol className="list-decimal list-outside ml-6 space-y-1">
         {exerciseItems2.map((text, idx) => (
           <li key={idx} className="[&::marker]:font-bold">
-            <div className="flex items-center gap-2">
-              <p className="whitespace-nowrap">{text}</p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+              <p className="truncate sm:whitespace-nowrap whitespace-normal sm:mb-0 mb-1 max-w-full">{text}</p>
               <Input type="text" className="flex-1 min-w-0" />
             </div>
           </li>
