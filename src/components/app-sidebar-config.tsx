@@ -49,6 +49,11 @@ export const items = {
       url: "/dashboard/book1/exercise-three-four",
       icon: NotebookPenIcon,
     },
+    {
+      title: "Verbs, Group Three (3)",
+      url: "/dashboard/book1/verbs-group-three",
+      icon: NotebookText,
+    },
   ],
   book2: [
     // { title: "Home", url: "/dashboard", icon: BarChart3 }

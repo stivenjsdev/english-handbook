@@ -1,5 +1,3 @@
-
-
 import { Title1 } from "@/components/title1";
 import { Title2 } from "@/components/title2";
 import { Input } from "@/components/ui/input";
@@ -10,7 +8,6 @@ import {
   exerciseTitle1,
   exerciseTitle2,
 } from "./exerciseData";
-
 
 export default function ExerciseThreeAndFour() {
   return (
