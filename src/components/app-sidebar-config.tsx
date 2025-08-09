@@ -54,6 +54,11 @@ export const items = {
       url: "/dashboard/book1/verbs-group-three",
       icon: NotebookText,
     },
+    {
+      title: "Time adverbs",
+      url: "/dashboard/book1/time-adverbs",
+      icon: NotebookText,
+    },
   ],
   book2: [
     // { title: "Home", url: "/dashboard", icon: BarChart3 }
