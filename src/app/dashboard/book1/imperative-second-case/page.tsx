@@ -2,6 +2,8 @@ import { Bold } from "@/components/bold";
 import { Title1 } from "@/components/title1";
 import { Title2 } from "@/components/title2";
 import { SquareChevronRight } from "lucide-react";
+import Image from "next/image";
+import imperativeMoodCase2 from "./imperativeMoodCase2.png";
 
 export default function ImperativeSecondCasePage() {
   const secondCaseTable = [
@@ -120,37 +122,29 @@ export default function ImperativeSecondCasePage() {
       </Title2>
 
       <ul className="list-disc pl-6">
-        <li>
-          Let's give it! (¡Regalémoslo!)
-        </li>
-        <li>
-          Let's not give it! (¡No lo demos!)
-        </li>
-        <li>
-          Let's sing with her! (¡Cantemos con ella!)
-        </li>
-        <li>
-          Let's not sing with her! (¡No cantemos con ella!)
-        </li>
-        <li>
-          Let's ride it! (¡Montémoslo!)
-        </li>
-        <li>
-          Let's not ride it! (¡No lo montemos!)
-        </li>
-        <li>
-          Let's study with them! (¡Estudiemos con ellos!)
-        </li>
-        <li>
-          Let's not study with them! (¡No estudiemos con ellos!)
-        </li>
-        <li>
-          Let's obey him! (¡Obedezcámosle!)
-        </li>
-        <li>
-          Let's not obey him! (¡No le obedezcamos!)
-        </li>
+        <li>Let's give it! (¡Regalémoslo!)</li>
+        <li>Let's not give it! (¡No lo demos!)</li>
+        <li>Let's sing with her! (¡Cantemos con ella!)</li>
+        <li>Let's not sing with her! (¡No cantemos con ella!)</li>
+        <li>Let's ride it! (¡Montémoslo!)</li>
+        <li>Let's not ride it! (¡No lo montemos!)</li>
+        <li>Let's study with them! (¡Estudiemos con ellos!)</li>
+        <li>Let's not study with them! (¡No estudiemos con ellos!)</li>
+        <li>Let's obey him! (¡Obedezcámosle!)</li>
+        <li>Let's not obey him! (¡No le obedezcamos!)</li>
       </ul>
+
+      <div className="bg-white border border-gray-300 shadow-lg rounded-sm p-4 pb-8 w-full lg:w-xl lg:mx-auto">
+        <Image
+          src={imperativeMoodCase2}
+          alt="imperativeMoodCase2"
+          className="rounded-sm"
+        />
+        {/* <p className="text-center text-sm font-semibold mt-4">
+                Imperative Mood Example
+              </p> */}
+        <p className="text-center text-sm font-semibold mt-4">Let's ride it!</p>
+      </div>
     </section>
   );
 }

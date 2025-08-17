@@ -55,6 +55,11 @@ export const items = {
       icon: MessageCircleWarning,
     },
     {
+      title: "Exercise Five (5)",
+      url: "/dashboard/book1/exercise-five",
+      icon: NotebookPenIcon,
+    },
+    {
       title: "Verbs, Group Three (3)",
       url: "/dashboard/book1/verbs-group-three",
       icon: NotebookText,
