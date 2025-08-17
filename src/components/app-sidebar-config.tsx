@@ -30,8 +30,8 @@ export const items = {
       icon: SquareMousePointerIcon,
     },
     {
-      title: "Exercise One (1) and Two (2)",
-      url: "/dashboard/book1/exercise-one-two",
+      title: "Exercise One (1)",
+      url: "/dashboard/book1/exercise-one",
       icon: NotebookPenIcon,
     },
     {
@@ -45,8 +45,8 @@ export const items = {
       icon: NotebookText,
     },
     {
-      title: "Exercise Three (3) and Four (4)",
-      url: "/dashboard/book1/exercise-three-four",
+      title: "Exercise Three (3)",
+      url: "/dashboard/book1/exercise-three",
       icon: NotebookPenIcon,
     },
     {
