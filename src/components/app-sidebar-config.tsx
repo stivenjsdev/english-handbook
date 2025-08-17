@@ -50,6 +50,11 @@ export const items = {
       icon: NotebookPenIcon,
     },
     {
+      title: "Imperativo Segundo Caso",
+      url: "/dashboard/book1/imperative-second-case",
+      icon: MessageCircleWarning,
+    },
+    {
       title: "Verbs, Group Three (3)",
       url: "/dashboard/book1/verbs-group-three",
       icon: NotebookText,
