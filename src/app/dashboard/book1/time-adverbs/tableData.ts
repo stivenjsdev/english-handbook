@@ -9,7 +9,7 @@ export const tableData = [
   },
   {
     column1: "Late (later)",
-    column2: "Tarde (más tarde)",
+    column2: "Tarde (más tarde / después)",
     link: "https://www.wordreference.com/es/translation.asp?tranword=late",
   },
   {
@@ -46,5 +46,10 @@ export const tableData = [
     column1: "At once",
     column2: "Ya mismo, enseguida",
     link: "https://www.wordreference.com/es/translation.asp?tranword=at%20once",
+  },
+  {
+    column1: "Immediately",
+    column2: "Ya mismo, enseguida",
+    link: "https://www.wordreference.com/es/translation.asp?tranword=immediately",
   },
 ];
