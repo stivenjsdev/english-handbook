@@ -17,7 +17,7 @@ export const tableData = [
     link: 'https://www.wordreference.com/es/translation.asp?tranword=disagree',
   },
   {
-    column1: 'Arrive (to)',
+    column1: 'Arrive (at/in)',
     column2: 'Llegar (a)',
     link: 'https://www.wordreference.com/es/translation.asp?tranword=arrive',
   },
